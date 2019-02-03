@@ -2,7 +2,7 @@
 	<div class="d-tabs__wrapper">
 		<v-tabs
 			v-if="config"
-			color="cyan"
+			color="primary"
 			dark
 			v-model="active"
 			sliderColor="yellow"
@@ -12,7 +12,7 @@
 				v-for="( tab, index ) in config.nodes"
 				:key="`tab_${index}`"
 			>
-				{{ tab.key }}
+				{{ tab.key.split('.')[0] }}
 			</v-tab>
 			<v-tab-item
 				v-for="( tab, index ) in config.nodes"
