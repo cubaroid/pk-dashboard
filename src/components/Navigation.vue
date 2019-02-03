@@ -7,20 +7,22 @@
 		<v-list dense>
 			<v-list-group
 				prependIcon="account_circle"
+				v-for="folder in files"
+				:key="folder.key"
 			>
 				<v-list-tile slot="activator">
 					<!-- hardcoded title for now -->
-					<v-list-tile-title>Flatting and 3Betting</v-list-tile-title>
+					<v-list-tile-title>{{ folder.key }}</v-list-tile-title>
 				</v-list-tile>
 				<v-list-tile 
-					v-for="item in files"
-					:key="item.folder"
-					@click="setSelectedNavItem(item.folder)"
+					v-for="item in folder.children"
+					:key="item.key"
+					@click="setSelectedNavItem(item.key)"
 				>
 					<v-list-tile-action>
 					</v-list-tile-action>
 					<v-list-tile-content>
-						<v-list-tile-title>{{ item.folder.toUpperCase() }}</v-list-tile-title>
+						<v-list-tile-title>{{ item.key.toUpperCase() }}</v-list-tile-title>
 					</v-list-tile-content>
 				</v-list-tile>
 			</v-list-group>

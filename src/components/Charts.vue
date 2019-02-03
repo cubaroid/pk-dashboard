@@ -9,13 +9,13 @@
 			showArrows
 		>
 			<v-tab
-				v-for="( tab, index ) in config.nodes"
+				v-for="( tab, index ) in config.children"
 				:key="`tab_${index}`"
 			>
 				{{ tab.key.split('.')[0] }}
 			</v-tab>
 			<v-tab-item
-				v-for="( tab, index ) in config.nodes"
+				v-for="( tab, index ) in config.children"
 				:key="`tab_content_${index}`"
 			>
 				<img 

@@ -20,7 +20,17 @@ const getters = {
 		return state.selectedNavItem;
 	},
 	selectedFolderNodes() {
-		return _.find(state.files, item => item.folder === state.selectedNavItem);
+		let result = [];
+		state.files.forEach( item => {
+			if ( item.children ) {
+				let temp =  _.find( item.children, child => child.key === state.selectedNavItem );
+				if ( temp ) {
+					result = temp;
+				}
+			}
+		});
+
+		return result;
 	}
 }
 

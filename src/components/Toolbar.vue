@@ -9,7 +9,7 @@
 			@click.stop="toggleNavigation"
 		>
 		</v-toolbar-side-icon>
-		<v-toolbar-title>PKH Dashboard {{ currentFolder ? ' - ' + currentFolder.folder : '' }}</v-toolbar-title>
+		<v-toolbar-title>PKH Dashboard {{ currentFolder ? ' - ' + currentFolder.key : '' }}</v-toolbar-title>
 	</v-toolbar>
 </template>
 
