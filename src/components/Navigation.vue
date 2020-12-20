@@ -8,16 +8,15 @@
 			<v-list-group
 				prependIcon="account_circle"
 				v-for="folder in files"
-				:key="folder.key"
+				:key="folder.id"
 			>
 				<v-list-tile slot="activator">
-					<!-- hardcoded title for now -->
 					<v-list-tile-title>{{ folder.key }}</v-list-tile-title>
 				</v-list-tile>
 				<v-list-tile 
 					v-for="item in folder.children"
-					:key="item.key"
-					@click="setSelectedNavItem(item.key)"
+					:key="item.id"
+					@click="setSelectedNavItem(item.id)"
 				>
 					<v-list-tile-action>
 					</v-list-tile-action>

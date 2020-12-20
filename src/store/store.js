@@ -23,7 +23,7 @@ const getters = {
 		let result = [];
 		state.files.forEach( item => {
 			if ( item.children ) {
-				let temp =  _.find( item.children, child => child.key === state.selectedNavItem );
+				let temp =  _.find( item.children, child => child.id === state.selectedNavItem );
 				if ( temp ) {
 					result = temp;
 				}
