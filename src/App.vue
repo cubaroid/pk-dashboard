@@ -30,6 +30,8 @@ import { mapGetters } from 'vuex';
 import Navigation from '@/components/Navigation.vue';
 import Toolbar from '@/components/Toolbar.vue';
 import Charts from '@/components/Charts.vue';
+import { findDeep } from 'deepdash-es/standalone'
+
 export default {
 	data: () => ({
 		drawer: null,
@@ -47,6 +49,10 @@ export default {
 		test() {
 			console.log('test');
 		}
+	},
+	mounted() {
+		window.__findDeep = findDeep;
+		window.test  = 'test';
 	}
 }
 </script>

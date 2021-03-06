@@ -53,7 +53,9 @@ export default {
 		config() {
 			this.active = null;
 			this.search = '';
-			this.$refs.search.$el.focus();
+			if ( this.$refs.search ) {
+				this.$refs.search.$el.focus();
+			}
 		}
 	},
 	methods: {
