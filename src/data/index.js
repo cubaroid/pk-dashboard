@@ -25,6 +25,7 @@ const generateFSTree = ( files, path ) => {
 				children: generateFSTree(fs.readdirSync(currentPath) , currentPath)
 			};
 		} else if ( imageRegex.test(item) ) {
+			currentPath = `${path}/${encodeURIComponent( item )}`;
 			return {
 				key: item,
 				isDir: false,
