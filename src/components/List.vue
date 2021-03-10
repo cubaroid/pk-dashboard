@@ -18,7 +18,10 @@ export default {
 		ListItem
 	},
 	props: {
-		files: Array
+		files: {
+			type: Array,
+			default: () => []
+		},
 	},
 	data() {
 		return {

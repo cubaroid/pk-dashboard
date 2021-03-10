@@ -44,8 +44,14 @@ import { mapActions, mapGetters } from 'vuex'
 export default {
 	name: 'list-item',
 	props: {
-		item: Object,
-		level: Number
+		item: {
+			type: Object,
+			default: () => {}
+		},
+		level: {
+			type: Number,
+			default: 0
+		}
 	},
 	methods: {
 		...mapActions(['setSelectedNavItem']),
