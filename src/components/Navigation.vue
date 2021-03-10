@@ -4,17 +4,14 @@
 		fixed
 		app
 	>
-
-	<List
-		:files="filteredFiles"
-	/>
-
-
+		<List
+			:files="filteredFiles"
+		/>
 	</v-navigation-drawer>
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
+import { mapGetters } from 'vuex'
 import List from './List'
 
 export default {

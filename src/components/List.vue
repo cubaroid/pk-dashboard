@@ -30,7 +30,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style>
 .v-list {
     display: flex;
 	flex-direction: column;

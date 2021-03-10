@@ -9,17 +9,6 @@ const state = {
 	selectedNavItem: null
 }
 
-const findItem = (items, id) => {
-	return _.find(items, item => {
-		if ( item.id === id  ) {
-			return true;
-		} else if( item.isDir ) {
-			return findItem(item.children, id);
-		} else {
-			return false;
-		}
-	})
-}
 
 const getters = {
 	isNavigationShown() {
